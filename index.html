@@ -5,36 +5,70 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title> Sulu Sport </title>
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/dropdown.css">
 </head>
 <body>
 
 	<header id="header" class="">
-		<object type="text/html" data="head.html"></object>
+		<topnav class ="topnav">
+			<h1> Sulu Sport</h1>
+	</topnav>
+
+	<nav class ="nav">
+		<ul>
+			<li class="dropdown">
+				<a href="" > HOMBRE </a>
+				<div class="dropdown-content">
+					<a> CAMISETAS </a>
+					<a> PANTALONES </a>
+					<a> ZAPATILLAS </a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="" > MUJER </a>
+				<div class="dropdown-content">
+					<a> CAMISETAS </a>
+					<a> PANTALONES </a>
+					<a> ZAPATILLAS </a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="" > NIÑOS </a>
+				<div class="dropdown-content">
+					<a> CAMISETAS </a>
+					<a> PANTALONES </a>
+					<a> ZAPATILLAS </a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="" > COMPLEMENTOS </a>
+				<div class="dropdown-content">
+					<a> CAMISETAS </a>
+					<a> PANTALONES </a>
+					<a> ZAPATILLAS </a>
+				</div>
+			</li>
+		</ul>
+	</nav>
 	</header><!-- /header -->
 
 
 	<section id="slider1">
-		<img id="globoRojo" class="globosCarousel" src="img/globoRojo.jpg">
-		<img id="globoAzul" class="globosCarousel" src="img/globoAzul.jpg">
-		<img id="globoVerde" class="globosCarousel" src="img/globoVerde.jpg">
-
-		<button class="botones" onclick="plusDivs1(-1)">&#10094;</button>
-		<button class="botones" onclick="plusDivs1(+1)">&#10095;</button>
+		<img id="globoRojo" class="globosCarousel" src="img/ropa-banner.jpg">
+		<img id="globoAzul" class="globosCarousel" src="img/accesorios-banner.jpg">
+		<img id="globoVerde" class="globosCarousel" src="img/suplementos-banner.png">
 	</section>
 
 
 	<section class="informacion">
-		<h1> Compranos esto s'hurmano que esta to gupao </h1>
+		<h1> <b> SURU VOLADOR  </b></h1>
 		<p> Son las mejores del mercado! Le quitamos el jack al iphone para venderte un adaptador solamente por 49.95€ que puedes añadirlo al boton de carga y funciona como jack, carga y a demas... tiene un boton para ir a inicio! (El X no tiene boton, regalamos este boton!!) Solo por 49.95€.</p>
 	</section>
 
 	<section id="slider2">
-		<img id="pelotaRoja" class="pelotasCarousel" src="img/pelotaBlanca.jpg">
-		<img id="pelotaAzul" class="pelotasCarousel" src="img/pelotaAzul.jpg">
-		<img id="pelotaBlanca" class="pelotasCarousel" src="img/pelotaRoja.jpg">
-
-		<button class="botones" onclick="plusDivs2(-1)">&#10094;</button>
-		<button class="botones" onclick="plusDivs2(+1)">&#10095;</button>
+		<img id="pelotaRoja" class="pelotasCarousel" src="img/globoAzul.jpg">
+		<img id="pelotaAzul" class="pelotasCarousel" src="img/globoRojo.jpg">
+		<img id="pelotaBlanca" class="pelotasCarousel" src="img/globoVerde.jpg">
 	</section>
 
 	<section id="info1" class="informacion">
@@ -47,84 +81,7 @@
 		<h1> Contacta con nosotros </h1>
 	</footer>
 
-	<script>
-
-		/* FUNCIONAMIENTO DEL CAROUSEL - SLIDER 1 */
-
-			//Pasar automaticamente
-			var slideIndex = 0;
-			carousel1();
-
-			function carousel1() {
-			    var i;
-			    var x = document.getElementsByClassName("globosCarousel");
-			    for (i = 0; i < x.length; i++) {
-			      x[i].style.display = "none"; 
-			    }
-			    slideIndex++;
-			    if (slideIndex > x.length) {slideIndex = 1} 
-			    x[slideIndex-1].style.display = "block"; 
-			    setTimeout(carousel1, 2000); 
-			}
-
-			//Pasar con los botones
-			showDivs(slideIndex);
-
-			function plusDivs1(n) {
-			  showDivs(slideIndex += n);
-			}
-
-			function showDivs(n) {
-				var i;
-			 	var x = document.getElementsByClassName("globosCarousel");
-			  	if (n > x.length) {slideIndex = 1}    
-			  	if (n < 1) {slideIndex = x.length}
-			  	for (i = 0; i < x.length; i++) {
-			    	x[i].style.display = "none";  
-			  	}
-			  	x[slideIndex-1].style.display = "block";  
-			}
-		/* FUNCIONAMIENTO DEL CAROUSEL - SLIDER 1 */
-
-
-		/* FUNCIONAMIENTO DEL CAROUSEL - SLIDER 2 */
-
-			//Pasar automaticamente
-			var slideIndex = 0;
-			carousel2();
-
-			function carousel2() {
-			    var i;
-			    var x = document.getElementsByClassName("pelotasCarousel");
-			    for (i = 0; i < x.length; i++) {
-			      x[i].style.display = "none"; 
-			    }
-			    slideIndex++;
-			    if (slideIndex > x.length) {slideIndex = 1} 
-			    x[slideIndex-1].style.display = "block"; 
-			    setTimeout(carousel2, 2000); 
-			}
-
-			//Pasar con los botones
-			showDivs2(slideIndex);
-
-			function plusDivs2(n) {
-			  showDivs2(slideIndex += n);
-			}
-
-			function showDivs2(n) {
-				var i;
-			 	var x = document.getElementsByClassName("pelotasCarousel");
-			  	if (n > x.length) {slideIndex = 1}    
-			  	if (n < 1) {slideIndex = x.length}
-			  	for (i = 0; i < x.length; i++) {
-			    	x[i].style.display = "none";  
-			  	}
-			  	x[slideIndex-1].style.display = "block";  
-			}
-		/* FUNCIONAMIENTO DEL CAROUSEL - SLIDER 2 */
-
-	</script>
+	<script src="js/carousel.js"></script>
 
 </body>
 </html>
