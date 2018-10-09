@@ -1,5 +1,29 @@
-#registro{
-	padding-top: 20%;
+#elegir{
 	width: 100%;
 	text-align: center;
+	padding-top: 15%;
+}
+
+#registro{
+	width: 100%;	
+}
+
+#iniciar{
+	width: 100%;
+}
+
+.respuestas{
+	display: none;
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+.botones{
+	width: 100%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#vuelve{
+	display: none;
 }
