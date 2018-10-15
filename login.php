@@ -67,7 +67,7 @@
 		</header><!-- /header -->
 
 		<section id="elegir">
-			<form action="index.html">
+			<form action="index.php">
 				<div id="registro" class="respuestas">
 					<article>
 						Nombre: <input type="nom" name="nom">

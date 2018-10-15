@@ -1,0 +1,4 @@
+AuthType Basic 
+AuthName "Sulu Sport" 
+AuthUserFile /home/TDIW/tdiw-n4/public_html/.htpasswd 
+Require valid-user
