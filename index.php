@@ -15,7 +15,7 @@
                 </ul>
                 <ul id="registreCistella">
                     <li id="iniciaSesion">
-                        <a id="linkInicia" href="login.php"><a class="logo"><img  src="img/user.png"></a></a>
+                        <a id="linkInicia" href="login.php"><img  src="img/user.png"></a>
                     </li>
                     <a><img  src="img/cart.png"></a>
                 </ul>
