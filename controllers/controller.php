@@ -1,43 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Sulu Sport </title>
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/dropdown.css">
-</head>
-<body>
-<?php include 'views/header.php'; ?>
-
-<div id="inicio">
-    <section id="slider1">
-        <img id="globoRojo" class="globosCarousel" src="img/ropa-banner.jpg">
-        <img id="globoAzul" class="globosCarousel" src="img/accesorios-banner.jpg">
-        <img id="globoVerde" class="globosCarousel" src="img/suplementos-banner.png">
-    </section>
+<?php
+include '__DIR__/../config.php';
+require_once('__dir__/../models/connectaBD.php');
 
 
-    <section class="informacion">
-        <h1> <b> SURU VOLADOR  </b></h1>
-        <p> Son las mejores del mercado! Le quitamos el jack al iphone para venderte un adaptador solamente por 49.95€ que puedes añadirlo al boton de carga y funciona como jack, carga y a demas... tiene un boton para ir a inicio! (El X no tiene boton, regalamos este boton!!) Solo por 49.95€.</p>
-    </section>
+$conn = connectaDB();
 
-    <section id="slider2">
-        <img id="pelotaRoja" class="pelotasCarousel" src="img/globoAzul.jpg">
-        <img id="pelotaAzul" class="pelotasCarousel" src="img/globoRojo.jpg">
-        <img id="pelotaBlanca" class="pelotasCarousel" src="img/globoVerde.jpg">
-    </section>
+include 'views/header.php'; include 'views/footer.php';
 
-    <section id="info1" class="informacion">
-        <h1> Compranos esto s'hurmano que esta to gupao </h1>
-        <p> Son las mejores del mercado! Le quitamos el jack al iphone para venderte un adaptador solamente por 49.95€ que puedes añadirlo al boton de carga y funciona como jack, carga y a demas... tiene un boton para ir a inicio! (El X no tiene boton, regalamos este boton!!) Solo por 49.95€.</p>
-    </section>
+$sql = 'SELECT id_categoria, `nom` FROM Categoria';
 
-    <script src="js/carousel.js"></script>
-</div>
+$stmt = $conn->prepare($sql);
 
-<?php include 'views/footer.php'; ?>
+$stmt->execute();
+
+$categories = $stmt->fetchAll();
+
+print_r($categories);
+
+?>
 
 </body>
 </html>

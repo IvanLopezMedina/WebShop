@@ -1,22 +1,14 @@
-<?php ?><footer>
+</div>
+<footer>
     <section class="globalFooter">
         <section class="up">
             <ul class="diferentColor">
-                <li>
-                    <a href="">CATEGORIAS</a>
-                </li>
-                <li>
-                    <a href="">HOMBRE</a>
-                </li>
-                <li>
-                    <a href="">MUJER</a>
-                </li>
-                <li>
-                    <a href="">NIÑOS</a>
-                </li>
-                <li>
-                    <a href="">COMPLEMENTOS</a>
-                </li>
+                <?php
+                foreach ($categories as $categoria){?>
+                    <li>
+                    <a><?php echo $categoria['nom']; ?></a>
+                    </li><?php
+                }?>
             </ul>
             <ul>
                 <li>
@@ -45,18 +37,18 @@
             </ul>
             <ul class="footerIcons">
                 <li>
+                <span>
+                    <a href="">Icon 1</a>
+                </span>
                     <span>
-                        <a href="">Icon 1</a>
-                    </span>
+                     <a href="">Icon 2</a>
+                </span>
                     <span>
-                         <a href="">Icon 2</a>
-                    </span>
+                     <a href="">Icon 3</a>
+                </span>
                     <span>
-                         <a href="">Icon 3</a>
-                    </span>
-                    <span>
-                         <a href="">Icon 4</a>
-                    </span>
+                     <a href="">Icon 4</a>
+                </span>
                 </li>
             </ul>
         </section>
@@ -67,5 +59,4 @@
                 </li>
             </ul>
         </section>
-    </section>
 </footer>

@@ -1,63 +1,72 @@
-<?php /*
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> Sulu Sport </title>
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/dropdown.css">
-    </head>
-    <body>
-    <?php include 'views/header.php'; ?>
-
-        <div id="inicio">
-            <section id="slider1">
-                <img id="globoRojo" class="globosCarousel" src="img/ropa-banner.jpg">
-                <img id="globoAzul" class="globosCarousel" src="img/accesorios-banner.jpg">
-                <img id="globoVerde" class="globosCarousel" src="img/suplementos-banner.png">
-            </section>
-
-
-            <section class="informacion">
-                <h1> <b> SURU VOLADOR  </b></h1>
-                <p> Son las mejores del mercado! Le quitamos el jack al iphone para venderte un adaptador solamente por 49.95€ que puedes añadirlo al boton de carga y funciona como jack, carga y a demas... tiene un boton para ir a inicio! (El X no tiene boton, regalamos este boton!!) Solo por 49.95€.</p>
-            </section>
-
-            <section id="slider2">
-                <img id="pelotaRoja" class="pelotasCarousel" src="img/globoAzul.jpg">
-                <img id="pelotaAzul" class="pelotasCarousel" src="img/globoRojo.jpg">
-                <img id="pelotaBlanca" class="pelotasCarousel" src="img/globoVerde.jpg">
-            </section>
-
-            <section id="info1" class="informacion">
-                <h1> Compranos esto s'hurmano que esta to gupao </h1>
-                <p> Son las mejores del mercado! Le quitamos el jack al iphone para venderte un adaptador solamente por 49.95€ que puedes añadirlo al boton de carga y funciona como jack, carga y a demas... tiene un boton para ir a inicio! (El X no tiene boton, regalamos este boton!!) Solo por 49.95€.</p>
-            </section>
-
-            <script src="js/carousel.js"></script>
-        </div>
-
-        <?php include 'views/footer.php'; ?>
-
-    </body>
-</html>
-
- */ ?>
-
 <?php
+    if(!isset($_SESSION)) {
+        session_start();
+    }
 
-if (isset($_GET['id'])){
-    $action = $_GET['id'];
-} else {
-    $action = null;
-}
+    if (isset($_GET['accio'])){
+        $action = $_GET['accio'];
+    } else {
+        $action = null;
+        //include __DIR__ .'/controllers/navcontroller.php';
+    }
+
+    switch ($action) {
+        case 'llistar-categories':
+            include __DIR__.'/controllers/controllerLlistarCategories.php';
+            break;
+        case 'llistar-productes':
+            include __DIR__.'/controllers/controllerLlistarProducts.php';
+            break;
+        case 'click-subcategoria':
+            include __DIR__.'/controllers/controllerProducts.php';
+            break;
+        case 'add-to-cart':
+            include __DIR__.'/controllers/controllerCart.php';
+            break;
+        case 'load-product-details':
+            include __DIR__.'/controllers/controllerLoadProductDetails.php';
+            break;
+        case 'load-product':
+            include __DIR__.'/controllers/controllerProducts.php';
+            break;
+        case 'delete-session':
+            include __DIR__.'/controllers/controllerSession.php'; //Delete all cart
+            break;
+        case 'load-menu-options':
+            include __DIR__.'/controllers/controllerMenuOptions.php';
+            break;
+        case 'account':
+            include __DIR__.'/controllers/controllerUserAccount.php';
+            break;
+        case 'orders':
+            include __DIR__.'/controllers/controllerOrders.php';
+            break;
+        case 'comprar':
+            include __DIR__.'/controllers/controllerBuy.php';
+            break;
+        case 'mostrarComanda':
+            include __DIR__.'/controllers/controllerOrders.php';
+            break;
+        case 'login':
+            //include __DIR__ .'/controllers/navcontroller.php';
+            include __DIR__.'/controllers/controllerRegistreUsuari.php';
+            //include __DIR__ .'/controllers/footercontroller.php';
+            break;
+        case 'logout':
+            include __DIR__.'/logout.php';
+            break;
+        default:
+            include __DIR__.'/controllers/controllerInicio.php';
+            break;
+    }
+
+    if (!isset($_GET['accio'])) {
+        //include __DIR__ . '/controllers/footercontroller.php';
+    }
 
 
-if ($action){
-    require_once($action.'.php');
-}else{
-    require_once('controllers/controller.php');
-}
+
 
 ?>
+
+

@@ -1,0 +1,54 @@
+#grid {
+    background-color: lightgray;
+    display: grid;
+    padding: 5px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas: 'one two three';
+}
+
+.productDesing{
+    background-color: white;
+    text-align: center;
+    padding: 10%;
+    cursor: pointer;
+}
+
+.productDesing:hover{
+    background-color: whitesmoke;
+    filter: saturate(180%);
+}
+
+.description{
+    text-align: justify;
+    padding: 15%;
+}
+
+.imageDesing{
+    width: 100%;
+}
+
+.addCart{
+    border-radius: 5px;
+    color: black;
+    width: 120px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.close {
+    background-color: #ff495b;
+    width: 5%;
+    cursor: pointer;
+}
+
+
+/************** Animations and transforms **************/
+    .productDesing:hover .imageDesing {
+        -webkit-transform:scale(1.5);transform:scale(1.5);
+    }
+    .productDesing {
+        overflow:hidden;
+        cursor: pointer;
+    }
+

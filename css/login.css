@@ -1,0 +1,89 @@
+div#grid{
+    background-color:lightgray;
+}
+
+#grid{
+    display:grid;
+    padding:5px;
+    grid-column-gap:5px;
+    grid-row-gap:5px;
+    grid-template-areas:'reg log';
+}
+
+#grid section{
+    background-color:white;
+    text-align:center;
+}
+
+.button{
+    border-radius: 5px;
+    color:black;
+    width:100px;
+    height:35px;
+    margin-bottom:10px;
+}
+
+h3 {
+    text-align: center;
+    color:gray;
+}
+
+.textbox{
+    border-radius: 5px;
+    color:gray;
+    width:200px;
+    height:25px;
+}
+
+.change{
+    display:inline-block;
+    width: 50%;
+}
+
+#right{
+    float:right;
+}
+
+
+.diferentChange{
+    margin:0%;
+}
+
+
+table, th, td {
+
+    margin: auto;
+}
+
+table{
+    width:80%;
+}
+
+th{
+
+}
+
+.comanda td{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 10%;
+}
+
+.comanda:hover{
+    background-color: #cecece;
+    cursor:pointer;
+}
+
+#orders, #order{
+    padding-bottom: 29%;
+    padding-top: 5%;
+}
+
+#añade .comanda{
+    background-color: transparent;
+    cursor:context-menu;
+}
+
+.titulo{
+    padding:2%;
+}

@@ -1,0 +1,249 @@
+#displaymenu, #cistella{
+    background-color: #cecece;
+    width: 25%;
+    text-align: center;
+    padding-top: 0.5%;
+    border-radius: 50px;
+    border: 1px solid #323232;
+    padding-bottom: 1%;
+}
+#displaymenu:hover, #cistella:hover{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #cecece;
+}
+#displaymenu:hover .usermenu, #cistella:hover .productesCistella{
+    display:block;
+    position:absolute;
+    text-align:center;
+}
+
+.usermenu{
+    display: none;
+    background-color: #cecece;
+    border-top: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 5px;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 80%;
+    margin-top: 5%;
+}
+
+.menuitem{
+    text-align: center;
+    cursor: pointer;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    width: 500%;
+}
+
+.menuitem:hover, .productoCarrito:hover{
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+#imgUser{
+    width:100%;
+}
+
+
+.productesCistella{
+    display: none;
+    background-color: #cecece;
+    border-top: none;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5%;
+    z-index: 1;
+    padding-bottom: 6%;
+    padding-top: 5%;
+    cursor: pointer;
+}
+
+.scroll{
+    overflow-y:scroll;
+    height:400px;
+    margin:0px;
+    padding:0px;
+}
+
+.productoCarrito{
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.nom, .imatge, .preu{
+    display: block;
+}
+
+.imatge{
+    margin-left: 22%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 100px;
+    height: 100px;
+}
+
+.preu{
+    margin-top: 5%;
+}
+
+#clickLogin{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-right: 40%;
+    padding-left: 40%;
+    text-decoration:none;
+    color:#191919;
+}
+
+#settings, #pedidos, #logout{
+    color:#191919;
+    text-decoration: none;
+}
+
+#settings{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-right: 40%;
+    padding-left: 37%;
+    padding-left: 37%;
+}
+
+#logout{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-right: 39%;
+    padding-left: 37%;
+    padding-left: 37%;
+}
+
+#pedidos{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-right: 37%;
+    padding-left: 37%;
+}
+
+
+
+
+/************** Animations and transforms **************/
+
+/* NAV */
+
+.dropdown {
+    -webkit-animation: letrasMenu 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: letrasMenu 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes letrasMenu {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+        transform: translateZ(300px);
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(12px);
+        transform: translateZ(12px);
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+@keyframes letrasMenu {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+        transform: translateZ(300px);
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(12px);
+        transform: translateZ(12px);
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+/* LOGO */
+
+#logo1 {
+    -webkit-animation: adidogs 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+    animation: adidogs 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+}
+
+@-webkit-keyframes adidogs {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+@keyframes adidogs {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
+#logo2 {
+    -webkit-animation: niko 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s reverse both;
+    animation: niko 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s reverse both;
+}
+
+
+@-webkit-keyframes niko {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+        transform: translateZ(300px);
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+@keyframes niko {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+        transform: translateZ(300px);
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
+
+
+
